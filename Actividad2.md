@@ -10,7 +10,7 @@ Ejecute el siguiente comando para crear y arrancar el contenedor:
     docker run -d --name web -p 8000:80 php:7.4-apache
     ```
 
-![](imagenes/Actividad2/imagen1.png)
+![](imagenes/Actividad2/Imagen1.png)
 
 Crear los archivos index.html y index.php en el contenedor
 Puedes elegir una de las tres alternativas indicadas. Aquí usaremos docker cp por simplicidad.
@@ -20,14 +20,14 @@ Crear el archivo index.html en tu sistema local con el contenido siguiente:
     ```html
     <h1>HOLA SOY Alberto Vicente García</h1>
     ```
-![](imagenes/Actividad2/imagen2.png)
+![](imagenes/Actividad2/Imagen2.png)
 
 Crear el archivo index.php en tu sistema local con el contenido siguiente:
 
     ```php
     <?php echo phpinfo(); ?>
     ```
-![](imagenes/Actividad2/imagen3.png)
+![](imagenes/Actividad2/Imagen3.png)
 
 Copiar los archivos al contenedor:
 
@@ -36,18 +36,18 @@ Copiar los archivos al contenedor:
     docker cp index.php web:/var/www/html/index.php
     ```
 
-![](imagenes/Actividad2/imagen4.png)
+![](imagenes/Actividad2/Imagen4.png)
 
 Verificar que los archivos funcionan correctamente
 
 Abre un navegador web e ingresa a las siguientes URLs para validar los archivos:
 http://localhost:8000/index.html → Debe mostrar "HOLA SOY Alberto Vicente García".
 
-![](imagenes/Actividad2/imagen5.png)
+![](imagenes/Actividad2/Imagen5.png)
 
 http://localhost:8000/index.php → Debe mostrar la página de información de PHP.
 
-![](imagenes/Actividad2/imagen6.png)
+![](imagenes/Actividad2/Imagen6.png)
    
 
 
@@ -67,11 +67,11 @@ Ejecuta el siguiente comando para crear el contenedor:
      mariadb
     ```
 
-![](imagenes/Actividad2/imagen7.png)
+![](imagenes/Actividad2/Imagen7.png)
 
 Conectar al servidor de base de datos desde tu ordenador
 
-![](imagenes/Actividad2/imagen8.png)
+![](imagenes/Actividad2/Imagen8.png)
 
 Valida que existe la base de datos prueba ejecutando el comando:
 
@@ -79,7 +79,7 @@ Valida que existe la base de datos prueba ejecutando el comando:
     SHOW DATABASES;
     ```
 
-![](imagenes/Actividad2/imagen9.png)
+![](imagenes/Actividad2/Imagen9.png)
 
 Intentar eliminar la imagen mariadb mientras el contenedor está en uso
 Ejecuta el siguiente comando:
@@ -88,6 +88,6 @@ Ejecuta el siguiente comando:
     docker rmi mariadb
     ```
 
-![](imagenes/Actividad2/imagen10.png)
+![](imagenes/Actividad2/Imagen10.png)
 
 Esto generará un error indicando que no se puede eliminar la imagen porque el contenedor bbdd está en uso.
